@@ -1,0 +1,31 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "BASS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpoyzner/edge.git"
+  },
+  "author": "Jeff Poyzner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpoyzner/edge/issues"
+  },
+  "homepage": "https://github.com/jpoyzner/edge",
+  "dependencies": {
+    "babel-loader": "^7.0.0",
+    "css-loader": "^0.28.1",
+    "mysql": "^2.11.1",
+    "style-loader": "^0.17.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "webpack": "^2.5.1"
+  }
+}
