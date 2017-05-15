@@ -6,7 +6,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.css$/, loader: "style-loader!css-loader"},
+            {test: /\.scss$/, use: [{loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}]},
             {test: /\.(js|jsx)$/, use: 'babel-loader'}
         ]
     },
