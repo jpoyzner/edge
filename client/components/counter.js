@@ -38,10 +38,12 @@ export default class Counter extends Component {
     }
 
     onIncrement() {
+        //browserHistory.push('/a');
         Store.dispatch({type: 'INCREMENT'});
     }
 
     onDecrement() {
+        //browserHistory.push('/a');
         Store.dispatch({type: 'DECREMENT'});
     } 
 }

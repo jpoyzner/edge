@@ -1,9 +1,10 @@
 import './css/style.css';
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Store from './store';
-import Page from './components/page'
+import Router from './components/router'
 
-const render = () => ReactDOM.render(<Page />, document.getElementById('jp-container'));
-render()
-Store.subscribe(render)
+const render = () => ReactDOM.render(<Router />, document.getElementById('jp-container'));
+Store.subscribe(render);
+render();
