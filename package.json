@@ -4,7 +4,7 @@
   "description": "BASS",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node ./server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,16 @@
   "homepage": "https://github.com/jpoyzner/edge",
   "dependencies": {
     "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.1",
     "mysql": "^2.11.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-devtools": "^3.4.0",
     "style-loader": "^0.17.0"
   },
   "devDependencies": {
