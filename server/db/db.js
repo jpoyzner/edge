@@ -10,8 +10,9 @@ var db = {
 		}
 		
 		this.connection =
-			mysql.createConnection({host: 'localhost',  user: config.user, password : config.password, database : 'base'});
+			mysql.createConnection({host: 'localhost',  user: config.user, password : config.password, database : 'edge'});
 
+		callback();
 	},
 	createLogTables: function(callback) {
 		this.run("SELECT 1 FROM data LIMIT 1", function(err, rows, fields) {
@@ -22,7 +23,7 @@ var db = {
 			
 			var createTable = "CREATE TABLE data (id INT AUTO_INCREMENT, logLine TEXT DEFAULT NULL, PRIMARY KEY (id))";
 			this.run(createTable, function() {
-				callback();
+				callback(true);
 			}.bind(this));
 		}.bind(this));
 	},

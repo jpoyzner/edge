@@ -3,8 +3,12 @@ var db = require('../db/db');
 
 module.exports = {
 	init: function() {
-		db.createLogTables(function() {
-    		fs.readFile('../../data/data.csv', 'utf8', function(err, data) {
+		db.createLogTables(function(wasCreated) {
+    		if (!wasCreated) {
+    			return;
+    		}
+
+    		fs.readFile('./server/data/data.csv', 'utf8', function(err, data) {
 				if (err) {
 					console.log(err);
 					return;
@@ -12,7 +16,7 @@ module.exports = {
 			  
 				this.saveLog(data.split('\n'), 1);
 			}.bind(this));
-	    });
+	    }.bind(this));
 	},
 	createLog: function(callback) {
 		//

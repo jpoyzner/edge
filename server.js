@@ -3,7 +3,7 @@ const app = express();
 
 const PORT = 8081;
 
-app.listen(PORT, function serverStarted() {
+app.listen(PORT, function() {
     require('./server/db/db').init(function() {
     	require('./server/managers/logmanager').init();
     });
