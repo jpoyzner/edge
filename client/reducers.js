@@ -1,10 +1,10 @@
-export default (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    default:
-      return state
-  }
+export default (state = {count: 0, page: 'A'}, action) => {
+  	switch (action.type) {
+  		case 'GOTOA': state.page = 'A'; break;
+  		case 'GOTOB': state.page = 'B'; break;
+    	case 'INCREMENT': state.count++; break;
+    	case 'DECREMENT': state.count--; break;	
+  	}
+
+  	return state;
 }

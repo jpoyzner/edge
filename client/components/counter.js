@@ -1,11 +1,12 @@
-import React, {Component} from 'react';
 import Store from '../store';
+import React, {Component} from 'react';
 
 export default class Counter extends Component {
     render() {
         return (
             <p>
-                Clicked: {Store.getState()} times
+                {this.props.text + " "}
+                Clicked: {Store.getState().count} times
                 {' '}
                 <button onClick={this.onIncrement}>
                   +
@@ -27,7 +28,7 @@ export default class Counter extends Component {
     }
 
     incrementIfOdd() {
-        if (Store.getState() % 2 !== 0) {
+        if (Store.getState().count % 2 !== 0) {
             this.onIncrement()
         }
     }
