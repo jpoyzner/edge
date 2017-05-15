@@ -1,3 +1,5 @@
+//TODO: Add config.js.sample file and use it to set up server
+
 const express = require('express');
 const app = express();
 
