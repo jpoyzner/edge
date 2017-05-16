@@ -1,3 +1,7 @@
+TO CONFIG DB:
+> cp server/db/db.config.sample server/db/db.config
+> (edit this file to point to your running MySQL instance)
+
 TO BUILD (with hotloading):
 > webpack
 
