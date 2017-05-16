@@ -1,12 +1,14 @@
-TO CONFIG DB:
+CREATE MYSQL DB CONFIG:
 > cp server/db/db.config.sample server/db/db.config
-> (edit this file to point to your running MySQL instance)
 
-TO BUILD (with hotloading):
+EDIT MYSQL DB CONFIG:
+> nano server/db/db.config
+
+BUILD (with hotloading):
 > webpack
 
-TO DEPLOY:
+DEPLOY:
 > npm start
 
-TO USE:
+USE:
 > localhost:8081
