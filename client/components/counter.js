@@ -6,7 +6,7 @@ export default class Counter extends Component {
         return (
             <p>
                 {this.props.text + " "}
-                Clicked: {Store.getState().count} times
+                Counter = {Store.getState().count}
                 {' '}
                 <button onClick={this.onIncrement}>
                   +
@@ -21,7 +21,7 @@ export default class Counter extends Component {
                 </button>
                 {' '}
                 <button onClick={this.incrementAsync.bind(this)}>
-                  Increment async
+                  Increment in one second
                 </button>
             </p>
         )

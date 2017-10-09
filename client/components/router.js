@@ -8,7 +8,7 @@ export default () => (
   	<Router>
   		<div>
     		<Route path="/" component={Nav} />
-			<Route path="/a" render={() => <Counter text="AAA" />} />
+			<Route path="/a" render={() => <Counter text="Welcome!" />} />
 			<Route path="/b" component={LogDisplay} />
 		</div>
   	</Router>

@@ -9,11 +9,7 @@ export default class Counter extends Component {
             <div id="jp-log-display">
                 <input id="jp-search" onInput={this.search} />
                 <div id="jp-logs-container">
-                    {logs.map(function(log) {
-                        return (
-                            <div className="jp-log">{log.logLine}</div>
-                        );
-                    })}
+                    {logs.map((log, index) => <div key={index} className="jp-log">{log.logLine}</div>)}
                 </div>
             </div>
         )
